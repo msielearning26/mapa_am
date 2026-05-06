@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; }
+    .font-display { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+
+    .module-card {
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .module-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+
+    .btn-action {
+      transition: all 0.25s ease;
+    }
+    .btn-action:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    .fade-in { animation: fadeIn 0.6s ease forwards; opacity: 0; }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .slide-up { animation: slideUp 0.5s ease forwards; opacity: 0; transform: translateY(20px); }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+    .flow-arrow { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+    .progress-line {
+      background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6, #f59e0b, #ef4444, #ec4899);
+      height: 4px;
+      border-radius: 2px;
+    }
+
+    .modal-overlay {
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      transition: opacity 0.3s ease;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <div id="app" class="w-full" style="background: #f0f4f0;">
+   <!-- HERO -->
+   <header class="relative overflow-hidden" style="background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3f 50%, #1a3a2a 100%);">
+    <div class="absolute inset-0 opacity-10">
+     <svg width="100%" height="100%"><defs>
+       <pattern id="dots" x="0" y="0" width="30" height="30" patternunits="userSpaceOnUse">
+        <circle cx="3" cy="3" r="1.5" fill="white" />
+       </pattern>
+      </defs><rect fill="url(#dots)" width="100%" height="100%" />
+     </svg>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 py-10 md:py-14">
+     <div class="flex items-center gap-3 mb-4 fade-in">
+      <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #6ee7a0;">
+       <i data-lucide="heart-handshake" style="width:22px;height:22px;color:#1a3a2a;"></i>
+      </div><span class="text-xs font-semibold tracking-widest uppercase" style="color:#6ee7a0;">Subsecretaría de Niñez, Mujer y Adultos Mayores · San Isidro</span>
+     </div>
+     <h1 id="hero-title" class="font-display text-3xl md:text-5xl font-bold text-white mb-3 slide-up">Fortalecimiento en la atención<br>
+       de Personas Mayores</h1>
+     <p id="hero-subtitle" class="text-base md:text-lg max-w-2xl slide-up" style="color:#a7d8b8; animation-delay:0.15s;">Actualizar y fortalecer capacidades para mejorar la atención, el acompañamiento y el diseño de políticas públicas desde un enfoque integral, innovador y centrado en la autonomía.</p><!-- Quick stats -->
+     <div class="flex flex-wrap gap-4 mt-8 slide-up" style="animation-delay:0.3s;">
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
+       <i data-lucide="calendar" style="width:16px;height:16px;"></i> 2026
+      </div>
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
+       <i data-lucide="layers" style="width:16px;height:16px;"></i> 6 Módulos
+      </div>
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
+       <i data-lucide="monitor-play" style="width:16px;height:16px;"></i> Modalidad Híbrida
+      </div>
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
+       <i data-lucide="users" style="width:16px;height:16px;"></i> Equipos Municipales
+      </div>
+     </div>
+    </div>
+   </header><!-- CICLO METODOLÓGICO -->
+   <section class="max-w-6xl mx-auto px-6 -mt-6 relative z-10 mb-10">
+    <div class="rounded-2xl p-6 md:p-8 shadow-lg" style="background: white;">
+     <h2 class="font-display text-xl font-bold mb-1" style="color:#1a3a2a;">Ciclo de aprendizaje por módulo</h2>
+     <p class="text-sm mb-6" style="color:#6b7a6f;">Cada módulo repite este ciclo para una experiencia práctica y significativa.</p>
+     <div class="flex flex-wrap items-center justify-center gap-3 md:gap-0">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center w-36">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#6ee7a0,#34d399);">
+        <i data-lucide="play-circle" style="width:28px;height:28px;color:#1a3a2a;"></i>
+       </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Cápsulas virtuales</span> <span class="text-xs" style="color:#6b7a6f;">2-3 por módulo · 10-15 min</span>
+      </div>
+      <div class="hidden md:flex items-center flow-arrow" style="color:#34d399;"><i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
+      </div><!-- Step 2 -->
+      <div class="flex flex-col items-center text-center w-36">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#93c5fd,#3b82f6);">
+        <i data-lucide="users" style="width:28px;height:28px;color:white;"></i>
+       </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Encuentro presencial</span> <span class="text-xs" style="color:#6b7a6f;">1 mensual · 2-3 hs</span>
+      </div>
+      <div class="hidden md:flex items-center flow-arrow" style="color:#3b82f6;"><i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
+      </div><!-- Step 3 -->
+      <div class="flex flex-col items-center text-center w-36">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#c4b5fd,#8b5cf6);">
+        <i data-lucide="clipboard-check" style="width:28px;height:28px;color:white;"></i>
+       </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Aplicación práctica</span> <span class="text-xs" style="color:#6b7a6f;">Casos reales + territorio</span>
+      </div>
+      <div class="hidden md:flex items-center flow-arrow" style="color:#8b5cf6;"><i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
+      </div><!-- Step 4 -->
+      <div class="flex flex-col items-center text-center w-36">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#fcd34d,#f59e0b);">
+        <i data-lucide="book-open" style="width:28px;height:28px;color:#1a3a2a;"></i>
+       </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Buenas prácticas</span> <span class="text-xs" style="color:#6b7a6f;">Agenda colaborativa</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- RUTA DE APRENDIZAJE -->
+   <section class="max-w-6xl mx-auto px-6 mb-10">
+    <div class="flex items-center justify-between mb-6">
+     <div>
+      <h2 class="font-display text-2xl font-bold" style="color:#1a3a2a;">Ruta de aprendizaje</h2>
+      <p class="text-sm" style="color:#6b7a6f;">Hacé clic en cada módulo para ver detalles y acceder a los recursos.</p>
+     </div>
+    </div>
+    <div class="progress-line w-full mb-8 rounded"></div>
+    <div id="modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    </div>
+   </section><!-- OBJETIVOS + DESTINATARIOS + ENFOQUE -->
+   <section class="max-w-6xl mx-auto px-6 mb-10">
+    <div class="grid md:grid-cols-3 gap-5">
+     <!-- Objetivos -->
+     <div class="rounded-2xl p-6 shadow-sm" style="background:white; border-left: 4px solid #34d399;">
+      <div class="flex items-center gap-2 mb-4">
+       <i data-lucide="target" style="width:20px;height:20px;color:#34d399;"></i>
+       <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">Objetivos</h3>
+      </div>
+      <ul class="space-y-2 text-sm" style="color:#3a4a3e;">
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Comprender la vejez con enfoque actual</li>
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Diseñar programas de envejecimiento activo</li>
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Detectar riesgos físicos, cognitivos y sociales</li>
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Comunicación empática y buen trato</li>
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Coordinar acciones intersectoriales</li>
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Incorporar tecnología inclusiva</li>
+       <li class="flex items-start gap-2"><span style="color:#34d399;">✦</span> Gestionar programas con impacto medible</li>
+      </ul>
+     </div><!-- Destinatarios -->
+     <div class="rounded-2xl p-6 shadow-sm" style="background:white; border-left: 4px solid #3b82f6;">
+      <div class="flex items-center gap-2 mb-4">
+       <i data-lucide="users" style="width:20px;height:20px;color:#3b82f6;"></i>
+       <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">Destinatarios</h3>
+      </div>
+      <div class="space-y-3 text-sm" style="color:#3a4a3e;">
+       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;">
+        <i data-lucide="users" style="width:20px;height:20px;color:#3b82f6;"></i>
+        <p>Empleados de la Subsecretaría de Niñez, Mujer y Adultos Mayores</p>
+       </div>
+       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;">
+        <i data-lucide="handshake" style="width:20px;height:20px;color:#3b82f6;"></i>
+        <p>Municipales con contacto directo con personas mayores</p>
+       </div>
+       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;">
+        <i data-lucide="clipboard-list" style="width:20px;height:20px;color:#3b82f6;"></i>
+        <p>Equipos que diseñan políticas públicas vinculadas</p>
+       </div>
+      </div>
+     </div><!-- Enfoque -->
+     <div class="rounded-2xl p-6 shadow-sm" style="background:white; border-left: 4px solid #8b5cf6;">
+      <div class="flex items-center gap-2 mb-4">
+       <i data-lucide="lightbulb" style="width:20px;height:20px;color:#8b5cf6;"></i>
+       <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">Enfoque pedagógico</h3>
+      </div>
+      <div class="space-y-2">
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
+        <i data-lucide="wrench" style="width:16px;height:16px;color:#8b5cf6;"></i> Aprendizaje práctico
+       </div>
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
+        <i data-lucide="file-text" style="width:16px;height:16px;color:#8b5cf6;"></i> Casos reales
+       </div>
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
+        <i data-lucide="users" style="width:16px;height:16px;color:#8b5cf6;"></i> Trabajo colaborativo
+       </div>
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
+        <i data-lucide="globe" style="width:16px;height:16px;color:#8b5cf6;"></i> Red intermunicipal
+       </div>
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
+        <i data-lucide="award" style="width:16px;height:16px;color:#8b5cf6;"></i> Especialistas por módulo
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- FOOTER -->
+   <footer class="text-center py-12 px-6" style="background:#1a3a2a;">
+   </footer>
+  </div><!-- MODULE MODAL -->
+  <div id="module-modal" class="fixed inset-0 z-50 hidden">
+   <div class="modal-overlay absolute inset-0" onclick="closeModal()"></div>
+   <div class="relative z-10 flex items-center justify-center h-full p-4">
+    <div id="modal-content" class="rounded-2xl shadow-2xl max-w-lg w-full max-h-[85%] overflow-auto" style="background:white;">
+    </div>
+   </div>
+  </div>
+  <script>
+const modules = [
+  {
+    id: 1, month: "Mayo", title: "Marco conceptual y tendencias",
+    icon: "compass", gradient: "linear-gradient(135deg,#6ee7a0,#34d399)", iconColor: "#1a3a2a",
+    topics: ["Nueva mirada sobre la vejez", "Tendencias globales en envejecimiento"],
+    professional: "Sociólogo/a", emoji: "🌍",
+    keywords: ["Envejecimiento activo", "Autonomía", "Sostenibilidad"],
+    url: "https://campus.sanisidro.gob.ar/course/section.php?id=201"
+  },
+  {
+    id: 2, month: "Mayo", title: "Comunicación y habilidades socioemocionales",
+    icon: "message-circle", gradient: "linear-gradient(135deg,#93c5fd,#3b82f6)", iconColor: "white",
+    topics: ["Buen trato y escucha activa", "Manejo de situaciones emocionales"],
+    professional: "Psicólogo/a", emoji: "💬",
+    keywords: ["Empatía", "Escucha activa", "Buen trato"],
+    url: "https://campus.sanisidro.gob.ar/course/section.php?id=202"
+  },
+  {
+    id: 3, month: "Junio", title: "Evaluación funcional y alertas",
+    icon: "shield-alert", gradient: "linear-gradient(135deg,#c4b5fd,#8b5cf6)", iconColor: "white",
+    topics: ["Detección temprana de riesgos", "Escalas de evaluación y derivación"],
+    professional: "Gerontólogo/a", emoji: "🔍",
+    keywords: ["Riesgo físico", "Cognitivo", "Social"],
+    url: "https://campus.sanisidro.gob.ar/course/section.php?id=203"
+  },
+  {
+    id: 4, month: "Junio", title: "Actividades innovadoras",
+    icon: "sparkles", gradient: "linear-gradient(135deg,#fcd34d,#f59e0b)", iconColor: "#1a3a2a",
+    topics: ["Programas creativos y participativos", "Tecnología y comunidad"],
+    professional: "Kinesiólogo/a", emoji: "✨",
+    keywords: ["Creatividad", "Participación", "Innovación"],
+    url: "https://campus.sanisidro.gob.ar/course/section.php?id=204"
+  },
+  {
+    id: 5, month: "Septiembre", title: "Salud integral",
+    icon: "heart-pulse", gradient: "linear-gradient(135deg,#fca5a5,#ef4444)", iconColor: "white",
+    topics: ["Enfermedades crónicas", "Nutrición y salud mental"],
+    professional: "Nutricionista", emoji: "❤️‍🩹",
+    keywords: ["Salud mental", "Nutrición", "Prevención"],
+    url: "https://campus.sanisidro.gob.ar/course/section.php?id=206"
+  },
+  {
+    id: 6, month: "Septiembre", title: "Tecnología y participación digital",
+    icon: "smartphone", gradient: "linear-gradient(135deg,#f9a8d4,#ec4899)", iconColor: "white",
+    topics: ["Apps y telemedicina", "Inclusión digital · Taller práctico"],
+    professional: "TecnoKids", emoji: "📱",
+    keywords: ["Inclusión digital", "Telemedicina", "Apps"],
+    url: "https://campus.sanisidro.gob.ar/course/section.php?id=207"
+  }
+];
+
+function renderModules() {
+  const grid = document.getElementById('modules-grid');
+  grid.innerHTML = '';
+  modules.forEach((m, i) => {
+    const card = document.createElement('div');
+    card.className = 'module-card rounded-2xl overflow-hidden cursor-pointer shadow-sm';
+    card.style.background = 'white';
+    card.style.animationDelay = `${i * 0.08}s`;
+    card.classList.add('slide-up');
+    card.onclick = () => openModal(m);
+    card.innerHTML = `
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center shadow-sm" style="background:${m.gradient};">
+              <i data-lucide="${m.icon}" style="width:22px;height:22px;color:${m.iconColor};"></i>
+            </div>
+            <div>
+              <span class="text-xs font-semibold tracking-wide uppercase" style="color:#6b7a6f;">${m.month}</span>
+              <span class="text-xs ml-2 px-2 py-0.5 rounded-full font-medium" style="background:#f0f4f0; color:#3a4a3e;">${m.id <= 6 ? 'Módulo ' + m.id : 'Cierre'}</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="font-display font-bold text-base mb-2" style="color:#1a3a2a;">${m.title}</h3>
+        <div class="flex flex-wrap gap-1.5 mb-3">
+          ${m.keywords.map(k => `<span class="text-xs px-2 py-0.5 rounded-full" style="background:#f0f4f0; color:#4a6a5a;">${k}</span>`).join('')}
+        </div>
+        <div class="flex items-center gap-2 text-xs" style="color:#6b7a6f;">
+          <i data-lucide="user" style="width:14px;height:14px;"></i> ${m.professional}
+        </div>
+      </div>
+      <div class="flex border-t" style="border-color:#f0f4f0;">
+        <button class="btn-action flex-1 flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold" style="color:#34d399;" onclick="event.stopPropagation();">
+          <i data-lucide="play-circle" style="width:14px;height:14px;"></i> Cápsulas
+        </button>
+        <div style="width:1px; background:#f0f4f0;"></div>
+        <button class="btn-action flex-1 flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold" style="color:#3b82f6;" onclick="event.stopPropagation();">
+          <i data-lucide="map-pin" style="width:14px;height:14px;"></i> Presencial
+        </button>
+        <div style="width:1px; background:#f0f4f0;"></div>
+        <button class="btn-action flex-1 flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold" style="color:#8b5cf6;" onclick="event.stopPropagation();">
+          <i data-lucide="clipboard-check" style="width:14px;height:14px;"></i> Actividad
+        </button>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+  lucide.createIcons();
+}
+
+function openModal(m) {
+  const modal = document.getElementById('module-modal');
+  const content = document.getElementById('modal-content');
+  content.innerHTML = `
+    <div class="p-1 rounded-t-2xl" style="background:${m.gradient};"></div>
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:${m.gradient};">
+            <i data-lucide="${m.icon}" style="width:24px;height:24px;color:${m.iconColor};"></i>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase" style="color:#6b7a6f;">${m.month} · ${m.id <= 6 ? 'Módulo ' + m.id : 'Cierre'}</p>
+            <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">${m.title}</h3>
+          </div>
+        </div>
+        <button onclick="closeModal()" class="w-8 h-8 rounded-full flex items-center justify-center" style="background:#f0f4f0;">
+          <i data-lucide="x" style="width:16px;height:16px;color:#6b7a6f;"></i>
+        </button>
+      </div>
+
+      <div class="mb-4">
+        <p class="text-xs font-semibold uppercase mb-2" style="color:#6b7a6f;">Contenidos</p>
+        ${m.topics.map(t => `<div class="flex items-start gap-2 mb-1.5 text-sm" style="color:#3a4a3e;"><span style="color:#34d399;">▸</span> ${t}</div>`).join('')}
+      </div>
+
+      <div class="flex items-center gap-2 mb-5 p-3 rounded-xl text-sm" style="background:#f0f4f0; color:#3a4a3e;">
+        <i data-lucide="user" style="width:16px;height:16px;color:#6b7a6f;"></i>
+        <span class="font-medium">Profesional:</span> ${m.professional}
+      </div>
+
+      <p class="text-xs font-semibold uppercase mb-3" style="color:#6b7a6f;">Flujo Moodle</p>
+      <div class="space-y-2 mb-5">
+        <a href="${m.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl text-sm cursor-pointer btn-action" style="background:#ecfdf5; color:#1a3a2a; border:1px solid #d1fae5; text-decoration:none;">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#34d399;"><i data-lucide="play-circle" style="width:16px;height:16px;color:white;"></i></div>
+          <div class="flex-1">
+            <p class="font-semibold text-sm">Ver Cápsulas</p>
+            <p class="text-xs" style="color:#6b7a6f;">2-3 videos de 10-15 min</p>
+          </div>
+          <i data-lucide="external-link" style="width:14px;height:14px;color:#34d399;"></i>
+        </a>
+        <a href="${m.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl text-sm cursor-pointer btn-action" style="background:#eff6ff; color:#1a3a2a; border:1px solid #dbeafe; text-decoration:none;">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#3b82f6;"><i data-lucide="map-pin" style="width:16px;height:16px;color:white;"></i></div>
+          <div class="flex-1">
+            <p class="font-semibold text-sm">Encuentro Presencial</p>
+            <p class="text-xs" style="color:#6b7a6f;">Info de fecha y sede</p>
+          </div>
+          <i data-lucide="external-link" style="width:14px;height:14px;color:#3b82f6;"></i>
+        </a>
+        <a href="${m.url}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl text-sm cursor-pointer btn-action" style="background:#f5f3ff; color:#1a3a2a; border:1px solid #ede9fe; text-decoration:none;">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#8b5cf6;"><i data-lucide="clipboard-check" style="width:16px;height:16px;color:white;"></i></div>
+          <div class="flex-1">
+            <p class="font-semibold text-sm">Actividad Práctica</p>
+            <p class="text-xs" style="color:#6b7a6f;">Caso real + aplicación en territorio</p>
+          </div>
+          <i data-lucide="external-link" style="width:14px;height:14px;color:#8b5cf6;"></i>
+        </a>
+      </div>
+    </div>
+  `;
+  modal.classList.remove('hidden');
+  lucide.createIcons();
+}
+
+function closeModal() {
+  document.getElementById('module-modal').classList.add('hidden');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+renderModules();
+</script>
+ </body>
+</html>
