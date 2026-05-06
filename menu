@@ -58,11 +58,11 @@
   <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  </head>
  <body>
-  <div id="app" class="w-full" style="background: #f0f4f0;">
-   <!-- HERO -->
+  <div id="app" class="w-full" style="background: #f0f4f0;"><!-- HERO -->
    <header class="relative overflow-hidden" style="background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3f 50%, #1a3a2a 100%);">
     <div class="absolute inset-0 opacity-10">
-     <svg width="100%" height="100%"><defs>
+     <svg width="100%" height="100%">
+      <defs>
        <pattern id="dots" x="0" y="0" width="30" height="30" patternunits="userSpaceOnUse">
         <circle cx="3" cy="3" r="1.5" fill="white" />
        </pattern>
@@ -71,25 +71,20 @@
     </div>
     <div class="relative max-w-6xl mx-auto px-6 py-10 md:py-14">
      <div class="flex items-center gap-3 mb-4 fade-in">
-      <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #6ee7a0;">
-       <i data-lucide="heart-handshake" style="width:22px;height:22px;color:#1a3a2a;"></i>
+      <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #6ee7a0;"><i data-lucide="heart-handshake" style="width:22px;height:22px;color:#1a3a2a;"></i>
       </div><span class="text-xs font-semibold tracking-widest uppercase" style="color:#6ee7a0;">Subsecretaría de Niñez, Mujer y Adultos Mayores · San Isidro</span>
      </div>
      <h1 id="hero-title" class="font-display text-3xl md:text-5xl font-bold text-white mb-3 slide-up">Fortalecimiento en la atención<br>
        de Personas Mayores</h1>
      <p id="hero-subtitle" class="text-base md:text-lg max-w-2xl slide-up" style="color:#a7d8b8; animation-delay:0.15s;">Actualizar y fortalecer capacidades para mejorar la atención, el acompañamiento y el diseño de políticas públicas desde un enfoque integral, innovador y centrado en la autonomía.</p><!-- Quick stats -->
      <div class="flex flex-wrap gap-4 mt-8 slide-up" style="animation-delay:0.3s;">
-      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
-       <i data-lucide="calendar" style="width:16px;height:16px;"></i> 2026
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;"><i data-lucide="calendar" style="width:16px;height:16px;"></i> 2026
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
-       <i data-lucide="layers" style="width:16px;height:16px;"></i> 6 Módulos
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;"><i data-lucide="layers" style="width:16px;height:16px;"></i> 6 Módulos
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
-       <i data-lucide="monitor-play" style="width:16px;height:16px;"></i> Modalidad Híbrida
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;"><i data-lucide="monitor-play" style="width:16px;height:16px;"></i> Modalidad Híbrida
       </div>
-      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;">
-       <i data-lucide="users" style="width:16px;height:16px;"></i> Equipos Municipales
+      <div class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style="background:rgba(110,231,160,0.15); color:#6ee7a0;"><i data-lucide="users" style="width:16px;height:16px;"></i> Equipos Municipales
       </div>
      </div>
     </div>
@@ -98,32 +93,30 @@
     <div class="rounded-2xl p-6 md:p-8 shadow-lg" style="background: white;">
      <h2 class="font-display text-xl font-bold mb-1" style="color:#1a3a2a;">Ciclo de aprendizaje por módulo</h2>
      <p class="text-sm mb-6" style="color:#6b7a6f;">Cada módulo repite este ciclo para una experiencia práctica y significativa.</p>
-     <div class="flex flex-wrap items-center justify-center gap-3 md:gap-0">
-      <!-- Step 1 -->
+     <div class="flex flex-wrap items-center justify-center gap-3 md:gap-0"><!-- Step 1 -->
       <div class="flex flex-col items-center text-center w-36">
-       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#6ee7a0,#34d399);">
-        <i data-lucide="play-circle" style="width:28px;height:28px;color:#1a3a2a;"></i>
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#6ee7a0,#34d399);"><i data-lucide="play-circle" style="width:28px;height:28px;color:#1a3a2a;"></i>
        </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Cápsulas virtuales</span> <span class="text-xs" style="color:#6b7a6f;">2-3 por módulo · 10-15 min</span>
       </div>
-      <div class="hidden md:flex items-center flow-arrow" style="color:#34d399;"><i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
+      <div class="hidden md:flex items-center flow-arrow" style="color:#34d399;">
+       <i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
       </div><!-- Step 2 -->
       <div class="flex flex-col items-center text-center w-36">
-       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#93c5fd,#3b82f6);">
-        <i data-lucide="users" style="width:28px;height:28px;color:white;"></i>
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#93c5fd,#3b82f6);"><i data-lucide="users" style="width:28px;height:28px;color:white;"></i>
        </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Encuentro presencial</span> <span class="text-xs" style="color:#6b7a6f;">1 mensual · 2-3 hs</span>
       </div>
-      <div class="hidden md:flex items-center flow-arrow" style="color:#3b82f6;"><i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
+      <div class="hidden md:flex items-center flow-arrow" style="color:#3b82f6;">
+       <i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
       </div><!-- Step 3 -->
       <div class="flex flex-col items-center text-center w-36">
-       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#c4b5fd,#8b5cf6);">
-        <i data-lucide="clipboard-check" style="width:28px;height:28px;color:white;"></i>
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#c4b5fd,#8b5cf6);"><i data-lucide="clipboard-check" style="width:28px;height:28px;color:white;"></i>
        </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Aplicación práctica</span> <span class="text-xs" style="color:#6b7a6f;">Casos reales + territorio</span>
       </div>
-      <div class="hidden md:flex items-center flow-arrow" style="color:#8b5cf6;"><i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
+      <div class="hidden md:flex items-center flow-arrow" style="color:#8b5cf6;">
+       <i data-lucide="chevron-right" style="width:28px;height:28px;"></i>
       </div><!-- Step 4 -->
       <div class="flex flex-col items-center text-center w-36">
-       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#fcd34d,#f59e0b);">
-        <i data-lucide="book-open" style="width:28px;height:28px;color:#1a3a2a;"></i>
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-2 shadow-md" style="background: linear-gradient(135deg,#fcd34d,#f59e0b);"><i data-lucide="book-open" style="width:28px;height:28px;color:#1a3a2a;"></i>
        </div><span class="text-sm font-semibold" style="color:#1a3a2a;">Buenas prácticas</span> <span class="text-xs" style="color:#6b7a6f;">Agenda colaborativa</span>
       </div>
      </div>
@@ -141,11 +134,9 @@
     </div>
    </section><!-- OBJETIVOS + DESTINATARIOS + ENFOQUE -->
    <section class="max-w-6xl mx-auto px-6 mb-10">
-    <div class="grid md:grid-cols-3 gap-5">
-     <!-- Objetivos -->
+    <div class="grid md:grid-cols-3 gap-5"><!-- Objetivos -->
      <div class="rounded-2xl p-6 shadow-sm" style="background:white; border-left: 4px solid #34d399;">
-      <div class="flex items-center gap-2 mb-4">
-       <i data-lucide="target" style="width:20px;height:20px;color:#34d399;"></i>
+      <div class="flex items-center gap-2 mb-4"><i data-lucide="target" style="width:20px;height:20px;color:#34d399;"></i>
        <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">Objetivos</h3>
       </div>
       <ul class="space-y-2 text-sm" style="color:#3a4a3e;">
@@ -159,45 +150,35 @@
       </ul>
      </div><!-- Destinatarios -->
      <div class="rounded-2xl p-6 shadow-sm" style="background:white; border-left: 4px solid #3b82f6;">
-      <div class="flex items-center gap-2 mb-4">
-       <i data-lucide="users" style="width:20px;height:20px;color:#3b82f6;"></i>
+      <div class="flex items-center gap-2 mb-4"><i data-lucide="users" style="width:20px;height:20px;color:#3b82f6;"></i>
        <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">Destinatarios</h3>
       </div>
       <div class="space-y-3 text-sm" style="color:#3a4a3e;">
-       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;">
-        <i data-lucide="users" style="width:20px;height:20px;color:#3b82f6;"></i>
+       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;"><i data-lucide="users" style="width:20px;height:20px;color:#3b82f6;"></i>
         <p>Empleados de la Subsecretaría de Niñez, Mujer y Adultos Mayores</p>
        </div>
-       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;">
-        <i data-lucide="handshake" style="width:20px;height:20px;color:#3b82f6;"></i>
+       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;"><i data-lucide="handshake" style="width:20px;height:20px;color:#3b82f6;"></i>
         <p>Municipales con contacto directo con personas mayores</p>
        </div>
-       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;">
-        <i data-lucide="clipboard-list" style="width:20px;height:20px;color:#3b82f6;"></i>
+       <div class="flex items-start gap-3 p-3 rounded-xl" style="background:#f0f7ff;"><i data-lucide="clipboard-list" style="width:20px;height:20px;color:#3b82f6;"></i>
         <p>Equipos que diseñan políticas públicas vinculadas</p>
        </div>
       </div>
      </div><!-- Enfoque -->
      <div class="rounded-2xl p-6 shadow-sm" style="background:white; border-left: 4px solid #8b5cf6;">
-      <div class="flex items-center gap-2 mb-4">
-       <i data-lucide="lightbulb" style="width:20px;height:20px;color:#8b5cf6;"></i>
+      <div class="flex items-center gap-2 mb-4"><i data-lucide="lightbulb" style="width:20px;height:20px;color:#8b5cf6;"></i>
        <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">Enfoque pedagógico</h3>
       </div>
       <div class="space-y-2">
-       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
-        <i data-lucide="wrench" style="width:16px;height:16px;color:#8b5cf6;"></i> Aprendizaje práctico
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;"><i data-lucide="wrench" style="width:16px;height:16px;color:#8b5cf6;"></i> Aprendizaje práctico
        </div>
-       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
-        <i data-lucide="file-text" style="width:16px;height:16px;color:#8b5cf6;"></i> Casos reales
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;"><i data-lucide="file-text" style="width:16px;height:16px;color:#8b5cf6;"></i> Casos reales
        </div>
-       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
-        <i data-lucide="users" style="width:16px;height:16px;color:#8b5cf6;"></i> Trabajo colaborativo
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;"><i data-lucide="users" style="width:16px;height:16px;color:#8b5cf6;"></i> Trabajo colaborativo
        </div>
-       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
-        <i data-lucide="globe" style="width:16px;height:16px;color:#8b5cf6;"></i> Red intermunicipal
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;"><i data-lucide="globe" style="width:16px;height:16px;color:#8b5cf6;"></i> Red intermunicipal
        </div>
-       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;">
-        <i data-lucide="award" style="width:16px;height:16px;color:#8b5cf6;"></i> Especialistas por módulo
+       <div class="flex items-center gap-3 text-sm p-2 rounded-lg" style="color:#3a4a3e; background:#f5f3ff;"><i data-lucide="award" style="width:16px;height:16px;color:#8b5cf6;"></i> Especialistas por módulo
        </div>
       </div>
      </div>
@@ -284,7 +265,7 @@ function renderModules() {
             </div>
             <div>
               <span class="text-xs font-semibold tracking-wide uppercase" style="color:#6b7a6f;">${m.month}</span>
-              <span class="text-xs ml-2 px-2 py-0.5 rounded-full font-medium" style="background:#f0f4f0; color:#3a4a3e;">${m.id <= 6 ? 'Módulo ' + m.id : 'Cierre'}</span>
+              <span class="text-xs ml-2 px-2 py-0.5 rounded-full font-medium" style="background:#f0f4f0; color:#3a4a3e;">Módulo ${m.id}</span>
             </div>
           </div>
         </div>
@@ -327,7 +308,7 @@ function openModal(m) {
             <i data-lucide="${m.icon}" style="width:24px;height:24px;color:${m.iconColor};"></i>
           </div>
           <div>
-            <p class="text-xs font-semibold uppercase" style="color:#6b7a6f;">${m.month} · ${m.id <= 6 ? 'Módulo ' + m.id : 'Cierre'}</p>
+            <p class="text-xs font-semibold uppercase" style="color:#6b7a6f;">${m.month} · Módulo ${m.id}</p>
             <h3 class="font-display text-lg font-bold" style="color:#1a3a2a;">${m.title}</h3>
           </div>
         </div>
@@ -387,5 +368,6 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 renderModules();
 </script>
- </body>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f45396f17d0b861',t:'MTc3NzUzODI0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f7a92e824622001',t:'MTc3ODA5NzY1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
